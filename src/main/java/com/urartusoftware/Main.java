@@ -1,16 +1,20 @@
 package com.urartusoftware;
 
 import com.urartusoftware.datastructures.BinarySearchTree;
+import com.urartusoftware.datastructures.HashTable;
 
 public class Main {
 
-    static BinarySearchTree bst = new BinarySearchTree(17);
+    static HashTable ht = new HashTable();
     public static void main(String[] args) {
-        bst.insert(78);
-        bst.insert(12);
-        bst.insert(5);
-        bst.insert(18);
+        ht.printTable();
 
-        System.out.println(bst.contains(12));
+        ht.set("nails", 100);
+        ht.set("tile", 50);
+        ht.set("lumber", 10);
+        ht.set("porcelain", 65);
+        ht.printTable();
+
+        System.out.println(ht.getKeys());
     }
 }
