@@ -1,20 +1,24 @@
 package com.urartusoftware;
 
 import com.urartusoftware.datastructures.BinarySearchTree;
+import com.urartusoftware.datastructures.Graph;
 import com.urartusoftware.datastructures.HashTable;
 
 public class Main {
 
-    static HashTable ht = new HashTable();
+    static Graph g = new Graph();
     public static void main(String[] args) {
-        ht.printTable();
+        g.addVertex("A");
+        g.addVertex("B");
+        g.addVertex("C");
+        g.printGraph();
 
-        ht.set("nails", 100);
-        ht.set("tile", 50);
-        ht.set("lumber", 10);
-        ht.set("porcelain", 65);
-        ht.printTable();
+        g.addEdge("A", "B");
+        g.addEdge("B", "C");
+        g.addEdge("A", "C");
+        g.printGraph();
 
-        System.out.println(ht.getKeys());
+        g.removeVertex("O");
+        g.printGraph();
     }
 }
