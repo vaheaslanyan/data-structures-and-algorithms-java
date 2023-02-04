@@ -1,12 +1,6 @@
 package com.urartusoftware;
 
-import com.urartusoftware.algorithms.BubbleSort;
-import com.urartusoftware.algorithms.InsertionSort;
-import com.urartusoftware.algorithms.SelectionSort;
-import com.urartusoftware.datastructures.BinarySearchTree;
-import com.urartusoftware.datastructures.Graph;
-import com.urartusoftware.datastructures.HashTable;
-
+import com.urartusoftware.algorithms.MergeSort;
 import java.util.Arrays;
 
 public class Main {
@@ -15,8 +9,8 @@ public class Main {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(arr));
 
-        InsertionSort.insertionSort(arr);
+        int[] sortedArr = MergeSort.mergeSort(arr);
 
-        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(sortedArr));
     }
 }

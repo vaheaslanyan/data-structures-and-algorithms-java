@@ -1,5 +1,6 @@
 package com.urartusoftware.algorithms;
 
+// A basic sort
 // Bubbling the largest item in an array to the top one iteration at a time
 // In-place sort
 // Space complexity O(1) and big O of O(n^2)

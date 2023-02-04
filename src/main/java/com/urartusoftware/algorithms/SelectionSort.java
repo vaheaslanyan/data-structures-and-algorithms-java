@@ -1,5 +1,6 @@
 package com.urartusoftware.algorithms;
 
+// A basic sort
 // Iterates through array and temporarily stores index of min value
 // after which the lowest item will be swapped to the begging of the array.
 public class SelectionSort {
