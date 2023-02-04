@@ -1,23 +1,20 @@
 package com.urartusoftware;
 
+import com.urartusoftware.algorithms.BubbleSort;
 import com.urartusoftware.datastructures.BinarySearchTree;
 import com.urartusoftware.datastructures.Graph;
 import com.urartusoftware.datastructures.HashTable;
 
+import java.util.Arrays;
+
 public class Main {
 
-    static BinarySearchTree bst = new BinarySearchTree();
+    static int[] arr = {1, 2, 5, 0, 7, 4, 2};
     public static void main(String[] args) {
+        System.out.println(Arrays.toString(arr));
 
-        bst.rInsert(72);
-        bst.rInsert(12);
-        bst.rInsert(13);
-        bst.rInsert(5);
-        bst.rInsert(82);
+        BubbleSort.bubbleSort(arr);
 
-        bst.rDeleteNode(5);
-
-        System.out.println(bst.rContains(5));
-
+        System.out.println(Arrays.toString(arr));
     }
 }
