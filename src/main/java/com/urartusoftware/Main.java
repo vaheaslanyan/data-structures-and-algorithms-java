@@ -6,19 +6,18 @@ import com.urartusoftware.datastructures.HashTable;
 
 public class Main {
 
-    static Graph g = new Graph();
+    static BinarySearchTree bst = new BinarySearchTree();
     public static void main(String[] args) {
-        g.addVertex("A");
-        g.addVertex("B");
-        g.addVertex("C");
-        g.printGraph();
 
-        g.addEdge("A", "B");
-        g.addEdge("B", "C");
-        g.addEdge("A", "C");
-        g.printGraph();
+        bst.rInsert(72);
+        bst.rInsert(12);
+        bst.rInsert(13);
+        bst.rInsert(5);
+        bst.rInsert(82);
 
-        g.removeVertex("O");
-        g.printGraph();
+        bst.rDeleteNode(5);
+
+        System.out.println(bst.rContains(5));
+
     }
 }
