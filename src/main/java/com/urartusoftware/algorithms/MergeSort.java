@@ -2,13 +2,14 @@ package com.urartusoftware.algorithms;
 
 import java.util.Arrays;
 
+// Recursive
 // Returns the sorted array
 // Divide and conquer. Very efficient, as efficient as possible.
 // Uses recursion to divide in half at each recursion until we have single-item arrays
 // which are by definition sorted. Then it will combine layer at a time them into sorted arrays
 // until the whole initial array is completely sorted
 // Space complexity of O(n)
-// Time complexity of O(log n)
+// Time complexity of O(n log n)
 public class MergeSort {
 
     public static int[] mergeSort(int[] arr) {
