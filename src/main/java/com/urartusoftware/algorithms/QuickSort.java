@@ -42,9 +42,6 @@ public class QuickSort {
 
         // Moving item at pivot to end of lower items
         swap(arr, pivotIndex, swapIndex);
-
-        System.out.println(Arrays.toString(arr));
-
         return swapIndex;
     }
 
@@ -52,7 +49,5 @@ public class QuickSort {
         int temp = arr[ind1];
         arr[ind1] = arr[ind2];
         arr[ind2] = temp;
-
-        System.out.println("Swapped " + arr[ind1] + " and " + arr[ind2]);
     }
 }
