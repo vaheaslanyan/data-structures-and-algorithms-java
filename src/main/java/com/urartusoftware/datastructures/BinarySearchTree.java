@@ -10,6 +10,8 @@ package com.urartusoftware.datastructures;
 // When adding, sort goes from top to bottom, layer by layer adding smaller values to the left and larger values to the right
 // Taken any node, all child nodes on the left will be less than that node and all the ones on the right will be greater than
 // Most operations in Binary Search Trees are Θ(log n) due to divide and conquer structure, however the big O is O(n)
+
+// See com.urartusoftware.algorithms.TreeTraversal for methods to traverse a Tree
 public class BinarySearchTree {
     Node root;
 
@@ -155,12 +157,30 @@ public class BinarySearchTree {
         return false;
     }
 
+    // For use in TreeTraversal
+    public Node getRoot() {
+        return this.root;
+    }
+
     public class Node {
         int value;
         Node left;
         Node right;
         Node(int value) {
             this.value = value;
+        }
+
+        // Getters for use in TreeTraversal
+        public int getValue() {
+            return this.value;
+        }
+
+        public Node getLeft() {
+            return this.left;
+        }
+
+        public Node getRight() {
+            return this.right;
         }
     }
 }
