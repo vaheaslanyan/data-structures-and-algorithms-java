@@ -4,25 +4,27 @@ package com.urartusoftware;
 import com.urartusoftware.algorithms.QuickSort;
 import com.urartusoftware.algorithms.TreeTraversal;
 import com.urartusoftware.datastructures.BinarySearchTree;
+import com.urartusoftware.datastructures.DoublyLinkedList;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class Main {
 
-    static BinarySearchTree bst = new BinarySearchTree();
+    static DoublyLinkedList dll = new DoublyLinkedList(1);
 
     public static void main(String[] args) {
 
-        bst.rInsert(78);
-        bst.rInsert(12);
-        bst.rInsert(5);
-        bst.rInsert(18);
-        bst.rInsert(19);
-        bst.rInsert(9);
+        dll.append(2);
+        dll.append(3);
+        dll.append(4);
+        dll.append(5);
+        dll.append(6);
+        dll.prepend(0);
 
-        List theList = TreeTraversal.DFSPreOrder(bst);
+        dll.insert(2, 9);
 
-        System.out.println(theList.toString());
+        dll.printList();
+        dll.getLength();
     }
 }
