@@ -1,7 +1,5 @@
 package com.urartusoftware.algorithms;
 
-import java.util.Arrays;
-
 // In-place algorithm
 // Uses pivot point to compare every item in the array to that item,
 // if an item is lower than the pivot item we exchange it with the first item that is greater and so on.
@@ -19,24 +17,22 @@ public class QuickSort {
     }
 
     public static void quickSort(int arr[], int left, int right) {
-
         if (left < right) {
             // do initial sort and get new pivot index
-            int newPivotIndex =  performSortAndReturnNewPivotIndex(arr, left, right);
+            int newPivotIndex = pivot(arr, left, right);
 
             // run on sections left and right to pivot
             quickSort(arr, left, newPivotIndex - 1);
             quickSort(arr, newPivotIndex + 1, right);
         }
-
-//        return;
     }
 
-
-    // Returns the index of item that was the pivot when running the method, which when returned should be in middle of the section that was sorted
-    private static int performSortAndReturnNewPivotIndex(int[] arr, int pivotIndex, int endIndex) {
+    // Sorts lower values to left and higher values to right and moves pivot value to middle, returns new index of pivot
+    // Result is not sorted completely, values lower than pivot on the left and higher ones on the right
+    private static int pivot(int[] arr, int pivotIndex, int endIndex) {
         int swapIndex = pivotIndex;
         for (int i = pivotIndex + 1; i <= endIndex; i++) {
+            // Swaps next smaller value with the last larger value
             if (arr[i] < arr[pivotIndex]) {
                 swapIndex++;
                 swap(arr, swapIndex, i);
@@ -45,7 +41,7 @@ public class QuickSort {
 
         // Moving item at pivot to end of lower items
         swap(arr, pivotIndex, swapIndex);
-        return swapIndex;
+        return swapIndex; // this will return as the new pivot index
     }
 
     private static void swap(int[] arr, int ind1, int ind2) {

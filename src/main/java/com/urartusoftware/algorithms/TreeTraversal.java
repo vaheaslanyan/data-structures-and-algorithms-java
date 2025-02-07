@@ -98,6 +98,7 @@ public class TreeTraversal {
     }
 
 
+    // InOrder
     public static ArrayList<Integer> DFSInOrder(BinarySearchTree bst) {
         ArrayList<Integer> results = new ArrayList<>();
 

@@ -2,7 +2,7 @@ package com.urartusoftware.datastructures;
 
 // Hash Table is implemented with an array (address space) that stores key-value pairs
 // Hash method runs on the key and returns an address (ASCII text numerical value) which corresponds to an index in the array.
-// Hash method one way: you can run a key and get an address, but you cannot do the reverse
+// Hash method is one way: you can run a key and get an address, but you cannot do the reverse
 // Hash method is deterministic. If you run the same key you will get the same address
 
 // There are a few ways to deal with collisions (when there is already an object at an address)
